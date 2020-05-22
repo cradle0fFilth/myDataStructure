@@ -10,7 +10,7 @@ private:
 		Node* right;
 		Node(T e)
 		{
-			thie->e = e;
+			this->e = e;
 			left = NULL;
 			right = NULL;
 		}
