@@ -44,12 +44,12 @@ public:
 	{
 		if(node->e == e)
 			return;
-		if (node->left == NULL&&e < node->left) {   //最小情况为不断的缩小二分搜索树知道这个树为NULL（NULL也是二分搜索树）
+		else if (node->left == NULL&&e < node->e) {   //最小情况为不断的缩小二分搜索树知道这个树为NULL（NULL也是二分搜索树）
 			node->left=new Node(e);
 			size++;
 			return;
 		}
-		else if(node->right == NULL&&e > node->right){
+		else if(node->right == NULL&&e > node->e){
 			node->right=new Node(e);
 			size++;
 			return;
